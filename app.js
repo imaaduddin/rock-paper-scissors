@@ -99,6 +99,6 @@ const showResult = function(result, messageText) {
 };
 
 
-combine([showResult, "ADD", 1, 5, 12, 4, -5, -7, 10]);
-combine([showResult, "ADD", 1, 5, 12, 4, -5, -7, 10, 5, -9, 13]);
-combine(showResult, "SUBTRACT", 1, 10, 15, 20);
+combine([showResult.bind(this, "The result after adding all numbers is:"), "ADD", 1, 5, 12, 4, -5, -7, 10]);
+combine([showResult.bind(this, "The result after adding all numbers is:"), "ADD", 1, 5, 12, 4, -5, -7, 10, 5, -9, 13]);
+combine(showResult.bind(this, "The result after subtracting all numbers is:"), "SUBTRACT", 1, 10, 15, 20);
